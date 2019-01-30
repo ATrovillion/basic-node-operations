@@ -1,0 +1,14 @@
+Questions
+    1. Run the commands sort, wc, and uniq on the commands.js file. Explain how they work and what the output was.
+        * The sort command outputs the contents of a file line-by-line in some order. Options include the ability to sort numerically, alphabetically, in reverse,
+        by month, and with or without duplicates. In the case where we applied sort to the commands.js file, the output was first by number of spaces, then special
+        characters, then alphabetically.
+        * The wc command prints a count of new lines, words, and bytes for the input file (or string). In the case of the commands.js file, wc output 45, 114, 1233.
+        * The uniq command outputs the contents of a file after filtering out adjacent repeated lines. Because the commands.js file doesn't contain adjacent identical
+        lines, the output matches the contents of the file.
+
+    2. Using the pipe (|), connect at least two commands and run it on commands.js. Explain what the output was, and why the specific data was outputted.
+
+        * $ sort commands.js | uniq | wc
+        * Outputs 37 111 1192. This is different from "wc commands.js" because the sort command puts similar lines together, the uniq command reduces the overall amount of content from the file, and that input
+        results in smaller line, word, and byte counts.
